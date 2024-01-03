@@ -68,7 +68,7 @@ CREATE TABLE `exporters` (
   `updated_at` datetime DEFAULT NULL,
   `display_name` varchar(255) DEFAULT NULL,
   `group` varchar(255) DEFAULT NULL,
-  `node_ips` varchar(1000) DEFAULT NULL,
+  `node_ips` longtext DEFAULT NULL,
   `identifier_name` varchar(255) DEFAULT NULL,
   `nodes_info` longtext,
   PRIMARY KEY (`id`)
@@ -142,6 +142,7 @@ CREATE TABLE `license_code` (
 
 LOCK TABLES `license_code` WRITE;
 /*!40000 ALTER TABLE `license_code` DISABLE KEYS */;
+INSERT INTO `license_code` VALUES (3,'01d4-a0da-d83d-9b4f','2106113121ZXN5000190','','2023-11-10 02:23:12',NULL);
 /*!40000 ALTER TABLE `license_code` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -308,7 +309,7 @@ CREATE TABLE `user_groups` (
 
 LOCK TABLES `user_groups` WRITE;
 /*!40000 ALTER TABLE `user_groups` DISABLE KEYS */;
-INSERT INTO `user_groups` VALUES (1,'admin',NULL,NULL,'2023-11-28 08:07:07',NULL),(2,'service',NULL,NULL,'2023-12-20 05:39:07',NULL),(3,'operator',NULL,'ssss','2023-11-23 08:44:47','2023-11-23 08:44:47');
+INSERT INTO `user_groups` VALUES (1,'admin','{}',NULL,'2023-11-28 08:07:07',NULL),(2,'service','{}',NULL,'2023-12-20 05:39:07',NULL),(3,'operator','{}','ssss','2023-11-23 08:44:47','2023-11-23 08:44:47');
 /*!40000 ALTER TABLE `user_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
